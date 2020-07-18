@@ -1,0 +1,7 @@
+body {
+  background-image: url('../images/SPACE.jpg');
+  background-position: 50% 0px;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  overflow-x: hidden !important;
+}

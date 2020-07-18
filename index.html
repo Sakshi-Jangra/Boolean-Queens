@@ -12,13 +12,33 @@
 
   <!-- JS links  -->
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
-  <script
-    type="text/javascript">WebFont.load({ google: { families: ["Roboto:300,regular,500,700", "Roboto Condensed:300,regular,700", "Anton:regular"] } });</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
 
-  <script
-    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <!-- FROM MS REPO -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./lib/themes/jquery.ui.all.css" />
+    
+    <script type="text/javascript" src="./lib/raphael-min.js"></script>
+    <script type="text/javascript" src="./lib/es5-shim.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./lib/state-machine.min.js"></script>
+    <script type="text/javascript" src="./lib/async.min.js"></script>
+    
+    <script type="text/javascript" src="./lib/ui/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.draggable.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.accordion.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.slider.min.js"></script>
+    
+    <script type="text/javascript" src="./lib/pathfinding-browser.min.js"></script>
+    
+    <script type="text/javascript" src="./js/view.js"></script>
+    <script type="text/javascript" src="./js/controller.js"></script>
+    <script type="text/javascript" src="./js/panel.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
   <style>
     body {
       overflow-x: hidden !important;
@@ -27,266 +47,7 @@
 </head>
 
 <body>
-  <div data-w-id="79930808-1437-4824-e6d7-6370aef2347d" style="display:block" class="loading-section"><img
-      src="images/girl.png" srcset="images/girl-p-500.png 500w, images/girl-p-800.png 800w, images/girl.png 835w"
-      sizes="100vw" data-w-id="8b4be816-b198-bd67-58b9-70b283804b66"
-      style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-      class="girl-at-window">
-    <div data-w-id="26eb68d4-c74a-22a0-1d6a-44ab49e02fd9" class="window"></div>
-    <div data-w-id="c8517810-bdd8-77b8-636f-4357cb2ed637"
-      style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-      class="loading-bar"></div>
-  </div>
-  <div data-w-id="1639da1c-7f06-780e-f2fe-99051ce16dd6"
-    style="-webkit-transform:translateX(-50VW) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(-50VW) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(-50VW) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(-50VW) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-    class="the-moon-below"><img src="images/moon-2.png"
-      srcset="images/moon-2-p-500.png 500w, images/moon-2-p-800.png 800w, images/moon-2-p-1080.png 1080w, images/moon-2.png 1292w"
-      sizes="50vw"></div>
-  <div data-w-id="e0265ad7-07f6-fde8-5521-778f45ef26cb"
-    style="-webkit-transform:translateX(-50VW) translateY(35VH) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(-50VW) translateY(35VH) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(-50VW) translateY(35VH) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(-50VW) translateY(35VH) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-    class="the-moon-below only-mobile w-hidden-main w-hidden-medium"><img src="images/moon-2.png"
-      srcset="images/moon-2-p-500.png 500w, images/moon-2-p-800.png 800w, images/moon-2-p-1080.png 1080w, images/moon-2.png 1292w"
-      sizes="(max-width: 767px) 50vw, 100vw"></div>
-  <div class="hold-content">
-    <div class="small-nav">
-      <div class="container w-container">
-        <div class="small-nav__left-side"><img src="images/usa.png" class="nav-icon"><a href="#"
-            class="small-nav__link">Store</a><a href="#" class="small-nav__link">Help</a><a href="#"
-            class="small-nav__link">Block</a></div>
-        <div class="small-nav__right-side"><img src="images/profile-icon.svg" class="nav-icon-profile"><a href="#"
-            class="small-nav__link">Login</a><a href="#" class="small-nav__link">Manage</a><img src="images/rocket.png">
-        </div>
-      </div>
-    </div>
-    <div data-w-id="993a679c-5a3a-c5c3-b34d-61ad76fb41ff" style="opacity:0"
-      class="container with-line-above-astro w-container">
-      <div data-collapse="medium" data-animation="default" data-duration="400"
-        data-w-id="b44ef363-88d7-8d9d-eee5-8f5959dbbbe4" class="main-nav w-nav"><a href="#"
-          class="main-nav__logo w-nav-brand"><img src="images/spaced-logo.png" width="250"></a>
-        <a href="#book-voyage" data-w-id="42db8c63-ade2-1301-a3de-e16165f5a41f"
-          class="main-nav__cta w-hidden-tiny w-inline-block">
-          <div>Book</div>
-          <div class="corner-upper-left"></div>
-          <div class="corner-upper-right"></div>
-          <div class="corner-bottom-right"></div>
-          <div class="corner-bottom-left"></div>
-        </a>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <div data-delay="150" data-hover="1" data-w-id="2f7ddcc6-b442-b13b-c7a0-29f9f4d8713c"
-            class="main-nav__dropdown w-dropdown">
-            <div class="main-nav__link w-dropdown-toggle">
-              <div class="main-nav__icon w-icon-dropdown-toggle"></div>
-              <div>Destinations</div>
-            </div>
-            <nav data-w-id="7f3318c5-d38c-8884-4fbf-b962293a8d04"
-              style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-              class="main-nav__dropdown-list w-dropdown-list"><a href="#destinations"
-                class="main-nav__dropdown-link moon-link w-dropdown-link">Moon</a><a href="#destinations"
-                class="main-nav__dropdown-link mars-link w-dropdown-link">Mars</a><a href="#destinations"
-                class="main-nav__dropdown-link jupiter-link w-dropdown-link">Jupiter</a><a href="#destinations"
-                class="main-nav__dropdown-link saturn-link w-dropdown-link">Saturn</a>
-              <div class="corner-upper-left"></div>
-              <div class="corner-upper-right"></div>
-              <div class="corner-bottom-right"></div>
-              <div class="corner-bottom-left"></div>
-            </nav>
-          </div><a href="#" class="main-nav__link w-nav-link">SHIPS</a><a href="#about"
-            class="main-nav__link w-nav-link">About</a><a href="#about" class="main-nav__link w-nav-link">FAQ&#x27;s</a>
-          <div class="corner-upper-right w-hidden-main"></div>
-          <div class="corner-bottom-right w-hidden-main"></div>
-          <div class="corner-bottom-left w-hidden-main"></div>
-          <div class="corner-upper-left w-hidden-main"></div>
-        </nav>
-        <div class="main-nav__menu-button w-nav-button">
-          <div class="corner-upper-left"></div>
-          <div class="corner-upper-right"></div>
-          <div class="corner-bottom-right"></div>
-          <div class="corner-bottom-left"></div>
-          <div data-w-id="04d1347d-d036-b32e-985c-25a11a43abf0" class="line-1"></div>
-          <div data-w-id="b4dd2ab0-0b56-54cf-bcba-3ad19452249b" class="line-2"></div>
-          <div data-w-id="ce7788a7-05e8-d2d5-6508-f5b846f0486d" class="line-3"></div>
-        </div>
-      </div>
-    </div>
-    <main data-w-id="25f51c47-faec-e0a2-14dd-197bc8b59d1b" style="opacity:0" class="hero-section">
-      <div class="container with-line w-container">
-        <div data-w-id="6b70ac25-7e91-819a-c2d5-48010a57cfd3"
-          style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-          class="orange-divider">
-          <div data-w-id="010358e6-b0c1-0836-c3db-4efbedbc424f"
-            style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-            class="third"></div>
-          <div data-w-id="66857567-7af8-b66b-10cf-08c612033dd0"
-            style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-            class="eighth"></div>
-        </div>
-        <div class="hold-heading"><img src="images/headline.png"
-            srcset="images/headline-p-500.png 500w, images/headline.png 746w"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 68vw, (max-width: 991px) 69vw, 750px"
-            data-w-id="1cb0b4e1-aa8d-f128-7dc9-0fe3bd319044" style="opacity:0" class="spaced-heading">
-          <div class="absolute-mask">
-            <div data-w-id="d06a6424-4729-db83-71e6-ea941dfd1507"
-              style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-              class="absolute-block"></div>
-            <div data-w-id="1449324b-0b12-2786-40f9-46dfa2fc5889"
-              style="-webkit-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(0) translateZ(0) scaleX(0) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-              class="absolute-block-bottom"></div>
-          </div>
-          <h1 id="book-voyage" class="heading">To Space<br>&amp; Back</h1>
-        </div>
-        <div class="form-parent">
-          <div class="form__description">Plan your voyage below</div>
-          <div data-w-id="db6dc86a-9326-dd20-fc12-fb89c0d894ca" class="form__main w-clearfix">
-            <div class="partial-column left">
-              <div class="form__descriptor-heading">Destination</div>
-              <div data-delay="150" data-hover="1" data-w-id="d5d98ba3-022a-dd77-c3d3-e38bdb652665"
-                class="main-nav__dropdown w-dropdown">
-                <div class="form-dropdown w-clearfix w-dropdown-toggle">
-                  <div class="form-icon w-icon-dropdown-toggle"></div>
-                  <div class="destination">
-                    <div data-w-id="28c3817d-7736-23f7-d82e-71518628dc27"
-                      style="-webkit-transform:translateX(99PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(99PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(99PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(99PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-                      class="floating-numbers-parent">
-                      <div class="number">Moon</div>
-                      <div class="number">Mars</div>
-                      <div class="number">Jupiter</div>
-                      <div class="number">Saturn</div>
-                    </div>
-                  </div>
-                </div>
-                <nav class="form-dropdown-list w-dropdown-list"><a href="#"
-                    data-w-id="94827cc3-9e68-29bb-1cab-dc6283082315"
-                    class="form-dropdown-link w-dropdown-link">Moon</a><a href="#"
-                    data-w-id="b3717329-e5af-8aef-2cad-924f22dec14e"
-                    class="form-dropdown-link w-dropdown-link">Mars</a><a href="#"
-                    data-w-id="d4c70615-94ea-08f4-c233-cfc6b447ac50"
-                    class="form-dropdown-link w-dropdown-link">Jupiter</a>
-                  <div class="new-pill">NEW!</div><a href="#" data-w-id="9f5b1c2e-181c-6561-4965-c34c620b394a"
-                    class="form-dropdown-link bottom-record w-dropdown-link">Saturn</a>
-                </nav>
-              </div>
-            </div>
-            <div class="partial-column right">
-              <div class="form__descriptor-heading">Departure</div>
-              <div data-delay="150" data-hover="1" data-w-id="0e2790c1-8714-0878-283a-da962b018f41"
-                class="main-nav__dropdown w-dropdown">
-                <div class="form-dropdown w-clearfix w-dropdown-toggle">
-                  <div class="form-icon w-icon-dropdown-toggle"></div>
-                  <div class="hold-floating-departures">
-                    <div data-w-id="7093b7ad-552b-5963-ca1d-fb00ac10b32d"
-                      style="-webkit-transform:translateX(51PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(51PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(51PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(51PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-                      class="floating-numbers-parent">
-                      <div class="number">JFK</div>
-                      <div class="number">SFO</div>
-                      <div class="number">MCO</div>
-                    </div>
-                  </div>
-                </div>
-                <nav class="form-dropdown-list w-dropdown-list"><a href="#"
-                    data-w-id="ecdd0221-02c0-63a9-d172-8f6e068181ef"
-                    class="form-dropdown-link w-dropdown-link">JFK</a><a href="#"
-                    data-w-id="ebe8c189-81b1-1b34-511e-93c39c837b15"
-                    class="form-dropdown-link w-dropdown-link">SFO</a><a href="#"
-                    data-w-id="028699de-415d-fd1a-1f8d-0278fd287399"
-                    class="form-dropdown-link bottom-record w-dropdown-link">MCO</a></nav>
-              </div>
-            </div>
-            <div class="partial-column-third">
-              <div class="form__descriptor-heading">Voyage Dates</div>
-              <div data-delay="150" data-hover="1" data-w-id="956d22f0-4066-a5e3-f809-148aa9b45fe5"
-                class="main-nav__dropdown w-dropdown">
-                <div class="form-dropdown w-clearfix w-dropdown-toggle">
-                  <div class="form-icon w-icon-dropdown-toggle"></div>
-                  <div class="voyage-date-parent">
-                    <div data-w-id="e4fb1bcc-143b-09a2-ba9e-c7d0eb37f5af"
-                      style="-webkit-transform:translateX(100PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(100PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(100PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(100PX) translateY(0) translateZ(0) scaleX(1) scaleY(1) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-                      class="floating-dates">
-                      <div class="number">March 2018</div>
-                      <div class="number">April 2018</div>
-                      <div class="number">May 2018</div>
-                    </div>
-                  </div>
-                </div>
-                <nav class="form-dropdown-list w-dropdown-list"><a href="#"
-                    data-w-id="0cc9b3b1-1f15-1eaf-edbd-71886889bfa0" class="form-dropdown-link w-dropdown-link">March
-                    2018</a><a href="#" data-w-id="379d196c-a8cc-4cc9-870d-55a3df9ff10e"
-                    class="form-dropdown-link w-dropdown-link">April 2018</a><a href="#"
-                    data-w-id="8def6613-8658-6cc5-9078-d80d5e263f19"
-                    class="form-dropdown-link bottom-record w-dropdown-link">May 2018</a></nav>
-              </div>
-            </div>
-            <div class="partial-column">
-              <div class="form__descriptor-heading">Passengers</div>
-              <div data-animation="slide" data-easing="ease-in-out-back" data-hide-arrows="1" data-duration="250"
-                data-infinite="1" class="passenger-slider w-clearfix w-slider">
-                <div class="slider-mask w-slider-mask">
-                  <div class="tiny-slide w-slide">
-                    <div class="number">1</div>
-                  </div>
-                  <div class="tiny-slide w-slide">
-                    <div class="number">2</div>
-                  </div>
-                  <div class="tiny-slide w-slide">
-                    <div class="number">3</div>
-                  </div>
-                  <div class="tiny-slide w-slide">
-                    <div class="number">4</div>
-                  </div>
-                  <div class="tiny-slide w-slide">
-                    <div class="number">5</div>
-                  </div>
-                  <div class="tiny-slide w-slide">
-                    <div class="number">6</div>
-                  </div>
-                </div>
-                <div class="plus-minus w-slider-arrow-left">
-                  <div class="minus">-</div>
-                </div>
-                <div class="plus-minus w-slider-arrow-right">
-                  <div class="plus">+</div>
-                </div>
-                <div class="slide-nav-2 w-slider-nav w-round"></div>
-              </div>
-            </div>
-            <a href="#" data-w-id="f28cdec6-7e28-370f-4f1b-ee44f8c1c5e8" class="get-started-orange w-inline-block">
-              <div>Get Started</div>
-              <div class="right-arrow">⌃</div>
-            </a>
-          </div>
-          <div data-w-id="c8e667b6-77d1-6a93-b68a-20fe96e45f75" style="display:none;opacity:0" class="modal__parent">
-            <div data-w-id="4bdbda29-b335-617b-d5f3-8642c47f4c59" class="modal__bg"></div>
-            <div data-w-id="869608ad-ee5f-500c-cec4-367ff69a9844"
-              style="-webkit-transform:translateX(0) translateY(-50%) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-moz-transform:translateX(0) translateY(-50%) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);-ms-transform:translateX(0) translateY(-50%) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0);transform:translateX(0) translateY(-50%) translateZ(0) scaleX(0) scaleY(0) scaleZ(1) rotateX(0) rotateY(0) rotateZ(0) skewX(0) skewY(0)"
-              class="modal__container">
-              <h3 class="modal__heading">404 Voyage Not Found</h3>
-              <p>This Spaced project was designed by <a href="https://dribbble.com/m_delsing" target="_blank"
-                  class="inline-link">Mike Delsing</a> and built out in <a href="https://webflow.com/" target="_blank"
-                  class="inline-link">Webflow</a> by <a href="https://dribbble.com/wbroodryk" target="_blank"
-                  class="inline-link">Waldo Broodryk</a> for the <a
-                  href="https://twitter.com/search?q=%23SPACEDchallenge&amp;src=tyah" target="_blank"
-                  class="inline-link">#SPACEDchallenge</a>.<br><br>If you enjoyed it, please share by clicking the
-                button below! <span class="emoji">😄🚀✨</span></p>
-              <div class="w-embed w-script"><a href="" class="space-button-centered-small" style="display:inline-block;"
-                  onclick="return tweet()">SHARE THIS PAGE ON TWITTER</a>
-                <script type="text/javascript">
-                  function tweet() {
-                    var u = 'https://codepen.io/waldo/project/full/ZJdgKL/';
-                    var t = "Check out this awesome #SPACEDchallenge concept by @mdelsing06 and @waldobroodryk #MadeInWebflow";
-                    window.open('http://twitter.com/share?url=' + encodeURIComponent(u) + '&text=' + encodeURIComponent(t), 'twitsharer', 'toolbar=0,status=0,width=626,height=436');
-                    return false;
-                  } 
-                </script>
-              </div>
-              <div data-w-id="1f72767b-26d3-52ab-e57d-c1366466f20d" class="close-button">+</div>
-            </div>
-          </div>
-        </div>
-        <a href="#explore" class="explore-link w-inline-block">
-          <div class="white-down-arrow w-icon-dropdown-toggle"></div>
-          <div class="explore-text-link">Explore</div>
-        </a>
-      </div>
-    </main>
+
 
     <!-- SECTION for GRID -->
     <section id="explore" data-w-id="e2e45d9c-69fc-e7de-4e80-cd02d98ddb7a" style="opacity:0" class="planet-section">
@@ -298,377 +59,210 @@
         <div class="orange-divider">
           <div class="third"></div>
         </div>
-        
-        <div data-duration-in="300" data-duration-out="100" class="w-tabs">
-          <div class="tabs-menu w-tab-menu">
-            <a data-w-tab="The Moon" class="planet-tab w-inline-block w-tab-link w--current">
-              <div class="planet-tab-description">
-                <div>Moon</div>
-                <div class="planet-price">$3,000</div>
-              </div>
-              <div class="new-pill upper-right">NEW!</div>
-            </a>
-            <a data-w-tab="Jupiter" class="planet-tab jupiter w-inline-block w-tab-link">
-              <div class="planet-tab-description">
-                <div>Jupiter</div>
-                <div class="planet-price">$4,000</div>
-              </div>
-            </a>
-            <a data-w-tab="Mars" class="planet-tab mars w-inline-block w-tab-link">
-              <div class="planet-tab-description">
-                <div>Mars</div>
-                <div class="planet-price">$3,000</div>
-              </div>
-            </a>
-            <a data-w-tab="Saturn" class="planet-tab saturn w-inline-block w-tab-link">
-              <div class="planet-tab-description">
-                <div>Saturn</div>
-                <div class="planet-price">$5,000</div>
-              </div>
-            </a>
-          </div>
-          <div class="tabs-content w-tab-content">
-            <div data-w-tab="The Moon" class="tab-pane w-tab-pane w--tab-active">
-              <h3 data-w-id="76925845-f43b-5246-c4cb-39f4a26bd8e2" class="massive-heading">MOON</h3>
-              <div class="destination-heading">
-                <div data-w-id="08584a36-58d3-66f1-4cb5-adbf018e1c99" class="orange-divider reversed">
-                  <div class="third upper">
-                    <div class="tiny-orange-call-out">Destination Overview</div>
-                  </div>
-                </div>
-                <h4 class="heading-3">THE MOON!</h4>
-                <div class="destination__sub-heading">More than just a destination</div>
-              </div>
-              <p class="destination__description">Our newest destination is the shortest trip SPACED offers. You will
-                have great views of earth, perfect for taking pictures. Not only will you have a luxury experience
-                getting to the moon, you will also be over the moon for the accommodations we have for you on earth’s
-                natural satellite. Be sure to look into our events held on the moon, you wont want to miss the
-                opportunity to see the next eclipse from the moons surface.</p>
-              <div class="destination__images">
-                <div data-w-id="7f79de50-428c-d740-a084-c030b530013d" class="w-row">
-                  <div class="no-padding-col w-col w-col-6 w-col-small-6 w-col-tiny-6"><img src="images/dinner.jpg"
-                      srcset="images/dinner-p-500.jpeg 500w, images/dinner.jpg 528w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 47vw, 36vw"
-                      data-w-id="cbb3d1df-135d-38b9-2639-ef0a5a268cab"></div>
-                  <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6"><img src="images/LivingRoom.jpg"
-                      srcset="images/LivingRoom-p-500.jpeg 500w, images/LivingRoom.jpg 552w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 47vw, 36vw"
-                      data-w-id="dd4402b4-90dc-d8b7-2687-580cf9ede4b9"><img src="images/moon.jpg"
-                      data-w-id="896c3f88-47da-ae3c-121a-013228f5d162" class="margined-image"></div>
-                </div>
-              </div>
-              <div class="flexed-destination-features">
-                <div class="orange-divider-cenetred">
-                  <div class="third-top"></div>
-                </div>
-                <h4 class="white-h4">Activities on the Moon</h4>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/moon-landing-tour.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Moon Landing Tour</div>
-                        <p class="paragraph">Was it real? We are 90% sure it happened.</p>
-                      </div>
-                      <div class="new-pill upper-right">NEW!</div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/space-bar.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Space Bar &amp; Grille</div>
-                        <p class="paragraph">Dine under the stars with views out of this world.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/galactic-arcades.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Galactic Arcades</div>
-                        <p class="paragraph">Fun for the whole family in our zero gravity arcade.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/rover-exepditions.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Rover Expeditions</div>
-                        <p class="paragraph">Explore the moon in style in our lunar rovers.</p>
-                      </div>
-                      <div class="new-pill upper-right">NEW!</div>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" data-w-id="a9579a24-e01d-e9b7-a559-ca1d623e55ae"
-                  class="orange-book-now w-hidden-tiny w-inline-block">
-                  <div>Book Now</div>
-                </a>
-                <a href="#" data-w-id="550f0178-77fa-ec0b-0a95-c7f1857b9a34"
-                  class="space-button-centered w-hidden-tiny w-inline-block">
-                  <div>All Destinations</div>
-                  <div class="corner-upper-left"></div>
-                  <div class="corner-upper-right"></div>
-                  <div class="corner-bottom-right"></div>
-                  <div class="corner-bottom-left"></div>
-                </a>
-              </div>
-            </div>
-            <div data-w-tab="Jupiter" class="tab-pane w-tab-pane">
-              <h3 data-w-id="71f551f8-0a7e-b819-fb7c-2ed26f16b1aa" class="massive-heading">Jupiter</h3>
-              <div class="destination-heading">
-                <div class="orange-divider reversed">
-                  <div class="third upper">
-                    <div class="tiny-orange-call-out">Destination Overview</div>
-                  </div>
-                </div>
-                <h4 class="heading-4">BEHOLD THE STORM</h4>
-                <div class="destination__sub-heading">More than just a GIANT HURRICANE OF Destruction</div>
-              </div>
-              <p class="destination__description">Our newest destination is the shortest trip SPACED offers. You will
-                have great views of earth, perfect for taking pictures. Not only will you have a luxury experience
-                getting to the moon, you will also be over the moon for the accommodations we have for you on earth’s
-                natural satellite. Be sure to look into our events held on the moon, you wont want to miss the
-                opportunity to see the next eclipse from the moons surface.</p>
-              <div class="destination__images">
-                <div data-w-id="b4b67e88-d0a1-9d04-16ee-ac5f45e8c912" class="w-row">
-                  <div class="no-padding-col w-col w-col-6"><img src="images/red-spot-jupiter.jpg" class="image-1">
-                  </div>
-                  <div class="w-col w-col-6"><img src="images/2.jpg"
-                      srcset="images/2-p-500.jpeg 500w, images/2.jpg 552w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 606px) 91vw, (max-width: 767px) 552px, (max-width: 991px) 47vw, 36vw"
-                      class="image-22"><img src="images/moon.jpg" class="margined-image v2"></div>
-                </div>
-              </div>
-              <div class="flexed-destination-features">
-                <div class="orange-divider-cenetred">
-                  <div class="third-top"></div>
-                </div>
-                <h4 class="white-h4">Activities on Jupiter</h4>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/moon-landing-tour.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Dips in the storm</div>
-                        <p class="paragraph">Was it real? We are 90% sure it happened.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/space-bar.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Space Bar &amp; Grille</div>
-                        <p class="paragraph">Dine under the stars with views out of this world.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/galactic-arcades.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Galactic Arcades</div>
-                        <p class="paragraph">Fun for the whole family in our zero gravity arcade.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/rover-exepditions.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Rover Expeditions</div>
-                        <p class="paragraph">Explore Jupiter in style in our storm exploration rovers.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" data-w-id="143ee32a-0a17-6ae0-9817-a611e7773c96"
-                  class="orange-book-now w-hidden-tiny w-inline-block">
-                  <div>Book Now</div>
-                </a>
-                <a href="#" data-w-id="2da3fe3a-187b-878b-214e-0f224b2fed06"
-                  class="space-button-centered w-hidden-tiny w-inline-block">
-                  <div>All Destinations</div>
-                  <div class="corner-upper-left"></div>
-                  <div class="corner-upper-right"></div>
-                  <div class="corner-bottom-right"></div>
-                  <div class="corner-bottom-left"></div>
-                </a>
-              </div>
-            </div>
-            <div data-w-tab="Mars" class="tab-pane w-tab-pane">
-              <h3 data-w-id="79f4f099-0bbd-c669-7c34-bbbae51122ce" class="massive-heading">Mars</h3>
-              <div class="destination-heading">
-                <div class="orange-divider reversed">
-                  <div class="third upper">
-                    <div class="tiny-orange-call-out">Destination Overview</div>
-                  </div>
-                </div>
-                <h4>THE RED PLANET</h4>
-                <div class="destination__sub-heading">WE&#x27;RE not alone, meet our interplanetary neighbors</div>
-              </div>
-              <p class="destination__description">Our newest destination is the shortest trip SPACED offers. You will
-                have great views of earth, perfect for taking pictures. Not only will you have a luxury experience
-                getting to the moon, you will also be over the moon for the accommodations we have for you on earth’s
-                natural satellite. Be sure to look into our events held on the moon, you wont want to miss the
-                opportunity to see the next eclipse from the moons surface.</p>
-              <div class="destination__images">
-                <div data-w-id="f44a0a96-f2e1-7630-1642-9e7f4e423827" class="w-row">
-                  <div class="no-padding-col w-col w-col-6"><img src="images/dinner.jpg"
-                      srcset="images/dinner-p-500.jpeg 500w, images/dinner.jpg 528w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 586px) 90vw, (max-width: 767px) 528px, (max-width: 991px) 47vw, 36vw"
-                      class="image-1"></div>
-                  <div class="w-col w-col-6"><img src="images/LivingRoom.jpg"
-                      srcset="images/LivingRoom-p-500.jpeg 500w, images/LivingRoom.jpg 552w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 606px) 91vw, (max-width: 767px) 552px, (max-width: 991px) 47vw, 36vw"
-                      class="image-22"><img src="images/3.jpg" class="margined-image v2"></div>
-                </div>
-              </div>
-              <div data-w-id="47f30c3d-137d-5198-a108-a98f662dcdcb" class="flexed-destination-features">
-                <div class="orange-divider-cenetred">
-                  <div class="third-top"></div>
-                </div>
-                <h4 class="white-h4">Activities on Mars</h4>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/moon-landing-tour.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Visit your country flag on Mars</div>
-                        <p class="paragraph">Our home away from home, let&#x27;s makes some memories.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/space-bar.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Space Bar &amp; Grille</div>
-                        <p class="paragraph">Dine under the stars with views out of this world.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/galactic-arcades.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Galactic Arcades</div>
-                        <p class="paragraph">Fun for the whole family in our zero gravity arcade.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div class="activity-pill"><img src="images/rover-exepditions.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Rover Expeditions</div>
-                        <p class="paragraph">Martian underground safaris leave every 30 minutes. Bring your camera!</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" data-w-id="511f897b-3df3-d6be-7d22-84cc8153aea9"
-                  class="orange-book-now w-hidden-tiny w-inline-block">
-                  <div>Book Now</div>
-                </a>
-                <a href="#" data-w-id="3d060102-1b60-a243-1f36-74d35705c0b8"
-                  class="space-button-centered w-hidden-tiny w-inline-block">
-                  <div>All Destinations</div>
-                  <div class="corner-upper-left"></div>
-                  <div class="corner-upper-right"></div>
-                  <div class="corner-bottom-right"></div>
-                  <div class="corner-bottom-left"></div>
-                </a>
-              </div>
-            </div>
-            <div data-w-tab="Saturn" class="tab-pane w-tab-pane">
-              <h3 data-w-id="f3485706-4490-abf2-a49f-65488006aa28" class="massive-heading">SATURN</h3>
-              <div class="destination-heading">
-                <div class="orange-divider reversed">
-                  <div class="third upper">
-                    <div class="tiny-orange-call-out">Destination Overview</div>
-                  </div>
-                </div>
-                <h4>AHOY SATURN</h4>
-                <div class="destination__sub-heading">HAS A NICE RING TO IT</div>
-              </div>
-              <p class="destination__description">Our newest destination is the shortest trip SPACED offers. You will
-                have great views of earth, perfect for taking pictures. Not only will you have a luxury experience
-                getting to the moon, you will also be over the moon for the accommodations we have for you on earth’s
-                natural satellite. Be sure to look into our events held on the moon, you wont want to miss the
-                opportunity to see the next eclipse from the moons surface.</p>
-              <div class="destination__images">
-                <div data-w-id="87ab9c6f-ac50-e7f7-f8d0-3656f8f59f88" class="w-row">
-                  <div class="no-padding-col w-col w-col-6"><img src="images/1.jpg"
-                      srcset="images/1-p-500.jpeg 500w, images/1.jpg 528w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 586px) 90vw, (max-width: 767px) 528px, (max-width: 991px) 47vw, 36vw"
-                      class="image-1"></div>
-                  <div class="w-col w-col-6"><img src="images/2.jpg"
-                      srcset="images/2-p-500.jpeg 500w, images/2.jpg 552w"
-                      sizes="(max-width: 479px) 100vw, (max-width: 606px) 91vw, (max-width: 767px) 552px, (max-width: 991px) 47vw, 36vw"
-                      class="image-22"><img src="images/moon.jpg" class="margined-image v2"></div>
-                </div>
-              </div>
-              <div data-w-id="4c35d758-3cca-8248-7ab7-b050cb267b4c" class="flexed-destination-features">
-                <div class="orange-divider-cenetred">
-                  <div class="third-top"></div>
-                </div>
-                <h4 class="white-h4">Activities on Saturn</h4>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div data-w-id="53d3a6af-d38d-4623-ee39-ecf0f977bb2e" class="activity-pill _1"><img
-                        src="images/moon-landing-tour.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Interpretive dances on the ring</div>
-                        <p class="paragraph">Flags will be provided, come join us as we play ring around the planet.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div data-w-id="d8489c88-da08-89e6-0af6-13e9a17d2892" class="activity-pill _2"><img
-                        src="images/space-bar.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Space Bar &amp; Grille</div>
-                        <p class="paragraph">Dine under the stars with views out of this world.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-row">
-                  <div class="w-col w-col-6">
-                    <div data-w-id="4924e324-d86c-efcb-e065-94ceb8bc525c" class="activity-pill _3"><img
-                        src="images/galactic-arcades.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Galactic Arcades</div>
-                        <p class="paragraph">Fun for the whole family in our zero gravity arcade.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-col w-col-6">
-                    <div data-w-id="025ba718-3b59-d7c6-7072-7f38bbebea1d" class="activity-pill _4"><img
-                        src="images/rover-exepditions.svg">
-                      <div class="pill-description">
-                        <div class="activity-sub-heading">Hyper speed day trips</div>
-                        <p class="paragraph">Days on Saturn only last about 10 hours, enjoy this warp speed tour.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" data-w-id="95b9e003-502e-25f4-fa88-6a14faf3ccc1"
-                  class="orange-book-now w-hidden-tiny w-inline-block">
-                  <div>Book Now</div>
-                </a>
-                <a href="#" data-w-id="d6bc1837-162d-7952-8050-1529c7e5c579"
-                  class="space-button-centered w-hidden-tiny w-inline-block">
-                  <div>All Destinations</div>
-                  <div class="corner-upper-left"></div>
-                  <div class="corner-upper-right"></div>
-                  <div class="corner-bottom-right"></div>
-                  <div class="corner-bottom-left"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>  
+    
+    <div id="draw_area"></div>
+    
+    <div id="instructions_panel" class="panel">
+      <header>
+        <h2 class="header_title">Instructions</h2>
+        <span id="hide_instructions">hide</span>
+      </header>
+      Click within the <span class="white">white</span> grid and drag your mouse to draw obstacles. <br>
+      Drag the <span class="green">green</span> node to set the start position. <br>
+      Drag the <span class="red">red</span> node to set the end position. <br>
+      Choose an algorithm from the right-hand panel. <br>
+      Click Start Search in the lower-right corner to start the animation.
+    </div>
+    
+    <div id="algorithm_panel" class="panel right_panel">
+      <header>
+        <h2 class="header_title">Select Algorithm</h2>
+      </header>
+    
+      <div class="accordion">
+        <h3 id="astar_header"><a href="#">A*</a></h3>
+        <div id="astar_section" class="finder_section">
+          <header class="option_header">
+            <h3>Heuristic</h3>
+          </header>
+          <div id="astar_heuristic" class="sub_options">
+            <input type="radio" name="astar_heuristic" value="manhattan" checked />
+            <label class="option_label">Manhattan</label> <br>
+            <input type="radio" name="astar_heuristic" value="euclidean" />
+            <label class="option_label">Euclidean</label> <br>
+            <input type="radio" name="astar_heuristic" value="octile" />
+            <label class="option_label">Octile</label> <br>
+            <input type="radio" name="astar_heuristic" value="chebyshev" />
+            <label class="option_label">Chebyshev</label> <br>
+          </div>
+    
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="allow_diagonal" checked>
+            <label class="option_label">Allow Diagonal</label> <br>
+            <input type="checkbox" class="bi-directional">
+            <label class="option_label">Bi-directional</label> <br>
+            <input type="checkbox" class="dont_cross_corners">
+            <label class="option_label">Don't Cross Corners</label> <br>
+            <input class="spinner" name="astar_weight" value="1">
+            <label class="option_label">Weight</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="ida_header"><a href="#">IDA*</a></h3>
+        <div id="ida_section" class="finder_section">
+          <header class="option_header">
+            <h3>Heuristic</h3>
+          </header>
+          <div id="ida_heuristic" class="sub_options">
+            <input type="radio" name="ida_heuristic" value="manhattan" checked />
+            <label class="option_label">Manhattan</label> <br>
+            <input type="radio" name="ida_heuristic" value="euclidean" />
+            <label class="option_label">Euclidean</label> <br>
+            <input type="radio" name="ida_heuristic" value="octile" />
+            <label class="option_label">Octile</label> <br>
+            <input type="radio" name="ida_heuristic" value="chebyshev" />
+            <label class="option_label">Chebyshev</label> <br>
+          </div>
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="allow_diagonal" checked>
+            <label class="option_label">Allow Diagonal</label> <br>
+            <input type="checkbox" class="dont_cross_corners">
+            <label class="option_label">Don't Cross Corners</label> <br>
+            <input class="spinner" name="astar_weight" value="1">
+            <label class="option_label">Weight</label> <br>
+            <input class="spinner" name="time_limit" value="10">
+            <label class="option_label">Seconds limit</label> <br>
+            <input type="checkbox" class="track_recursion" checked />
+            <label class="option_label">Visualize recursion</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="breadthfirst_header"><a href="#">Breadth-First-Search</a></h3>
+        <div id="breadthfirst_section" class="finder_section">
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="allow_diagonal" checked>
+            <label class="option_label">Allow Diagonal</label> <br>
+            <input type="checkbox" class="bi-directional">
+            <label class="option_label">Bi-directional</label> <br>
+            <input type="checkbox" class="dont_cross_corners">
+            <label class="option_label">Don't Cross Corners</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="bestfirst_header"><a href="#">Best-First-Search</a></h3>
+        <div id="bestfirst_section" class="finder_section">
+          <header class="option_header">
+            <h3>Heuristic</h3>
+          </header>
+          <div id="bestfirst_heuristic" class="sub_options">
+            <input type="radio" name="bestfirst_heuristic" value="manhattan" checked />
+            <label class="option_label">Manhattan</label> <br>
+            <input type="radio" name="bestfirst_heuristic" value="euclidean" />
+            <label class="option_label">Euclidean</label> <br>
+            <input type="radio" name="bestfirst_heuristic" value="octile" />
+            <label class="option_label">Octile</label> <br>
+            <input type="radio" name="bestfirst_heuristic" value="chebyshev" />
+            <label class="option_label">Chebyshev</label> <br>
+          </div>
+    
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="allow_diagonal" checked>
+            <label class="option_label">Allow Diagonal</label> <br>
+            <input type="checkbox" class="bi-directional">
+            <label class="option_label">Bi-directional</label> <br>
+            <input type="checkbox" class="dont_cross_corners">
+            <label class="option_label">Don't Cross Corners</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="dijkstra_header"><a href="#">Dijkstra</a></h3>
+        <div id="dijkstra_section" class="finder_section">
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="allow_diagonal" checked>
+            <label class="option_label">Allow Diagonal</label> <br>
+            <input type="checkbox" class="bi-directional">
+            <label class="option_label">Bi-directional</label> <br>
+            <input type="checkbox" class="dont_cross_corners">
+            <label class="option_label">Don't Cross Corners</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="jump_point_header"><a href="#">Jump Point Search</a></h3>
+        <div id="jump_point_section" class="finder_section">
+          <header class="option_header">
+            <h3>Heuristic</h3>
+          </header>
+          <div id="jump_point_heuristic" class="sub_options">
+            <input type="radio" name="jump_point_heuristic" value="manhattan" checked />
+            <label class="option_label">Manhattan</label> <br>
+            <input type="radio" name="jump_point_heuristic" value="euclidean" />
+            <label class="option_label">Euclidean</label> <br>
+            <input type="radio" name="jump_point_heuristic" value="octile" />
+            <label class="option_label">Octile</label> <br>
+            <input type="radio" name="jump_point_heuristic" value="chebyshev" />
+            <label class="option_label">Chebyshev</label> <br>
+          </div>
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="track_recursion" checked>
+            <label class="option_label">Visualize recursion</label> <br>
+          </div>
+        </div>
+    
+        <h3 id="orth_jump_point_header"><a href="#">Orthogonal Jump Point Search</a></h3>
+        <div id="orth_jump_point_section" class="finder_section">
+          <header class="option_header">
+            <h3>Heuristic</h3>
+          </header>
+          <div id="orth_jump_point_heuristic" class="sub_options">
+            <input type="radio" name="orth_jump_point_heuristic" value="manhattan" checked />
+            <label class="option_label">Manhattan</label> <br>
+            <input type="radio" name="orth_jump_point_heuristic" value="euclidean" />
+            <label class="option_label">Euclidean</label> <br>
+            <input type="radio" name="orth_jump_point_heuristic" value="octile" />
+            <label class="option_label">Octile</label> <br>
+            <input type="radio" name="orth_jump_point_heuristic" value="chebyshev" />
+            <label class="option_label">Chebyshev</label> <br>
+          </div>
+          <header class="option_header">
+            <h3>Options</h3>
+          </header>
+          <div class="optional sub_options">
+            <input type="checkbox" class="track_recursion" checked>
+            <label class="option_label">Visualize recursion</label> <br>
+          </div>
+        </div>
+    
+      </div><!-- .accordion -->
+    </div><!-- #algorithm_panel -->
+    
+    <div id="play_panel" class="panel right_panel">
+      <button id="button1" class="control_button">Start Search</button>
+      <button id="button2" class="control_button">Pause Search</button>
+      <button id="button3" class="control_button">Clear Walls</button>
+    </div>
+    
+    <div id="stats"></div>
+
 </body>
 
 </html>

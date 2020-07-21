@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./lib/themes/jquery.ui.all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/bootstrap-style.css" />
+  <link rel="stylesheet" href="./css/loader.css"> 
   <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
   
   <!-- Less Files -->
@@ -47,7 +48,39 @@
 
 </head>
 
-<body >
+<body onload="wait()">
+  <!-- loader  -->
+  <div class="space" id="waiting">
+    <div class="ship">
+      <div class="ship-rotate">
+        <div class="pod"></div>
+        <div class="fuselage"></div>
+      </div>
+    </div>
+    <div class="ship-shadow"></div>
+    <div class="mars">
+      <div class="tentacle"></div>
+      <div class="flag">
+        <div class="small-tentacle"></div>
+      </div>
+      <div class="planet">
+        <div class="surface"></div>
+        <div class="crater1"></div>
+        <div class="crater2"></div>
+        <div class="crater3"></div>
+      </div>
+    </div>
+    <div class="test"></div>
+  </div>
+  <script>
+    var preloader = document.getElementById('waiting');
+    function wait() {
+      setTimeout(function () {
+        preloader.style.display = 'none';
+      }, 12000);
+    }
+  </script>
+
   <!-- NAVIGATION -->
   <div class="menu">
     <span class="sub-btn btn-1"><a href="#"><i class="fa fa-snowflake-o"></i></a></span>

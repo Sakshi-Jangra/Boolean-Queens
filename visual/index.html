@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="./lib/themes/jquery.ui.all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/bootstrap-style.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/loader.css"> 
-  <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
+  <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
   
   <!-- Less Files -->
-  <link rel="stylesheet/less" type="text/css" href="./css/nav.less">
   <script src="//cdn.jsdelivr.net/npm/less"></script>
 
   <!-- JS links  -->
@@ -54,38 +55,9 @@
 
 <body onload="wait()">
   <!-- SOUND -->
-  <!-- <iframe style="display: none;" width="0" height="0" src="https://www.youtube.com/embed/Vfn_u768UoQ?rel=0&autoplay=1" frameborder="0"
+  <iframe style="display: none;" width="0" height="0" src="https://www.youtube.com/embed/Vfn_u768UoQ?rel=0&autoplay=1" frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe style="display: none;" width="560" height="315"
-      src="https://www.youtube.com/embed/z71wnt3O1Oc?controls=0&amp;start=16?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    <script>
-      
-        var song;
-        var button;
-
-        function setup() {
-          createCanvas(200, 200);
-          song = loadSound('', loaded);
-          button = createButton('play');
-          button.mousePressed(togglePlaying);
-          background(51);
-        }
-
-        function togglePlaying() {
-          if (!song.isPlaying()) {
-            song.play();
-            song.setVolume(0.3);
-            button.html('pause');
-          } else {
-            song.stop();
-            button.html('play');
-          }
-        }
-
-        function loaded() {
-          console.log('loaded');
-        }
-    </script>
+    
   <!-- loader  -->
   <div class="space" id="waiting">
     <div class="ship">
@@ -119,31 +91,61 @@
   </script>
 
   <!-- NAVIGATION -->
-  <div class="menu">
-    <span class="sub-btn btn-1"><a href="#"><i class="fa fa-snowflake-o"></i></a></span>
-    <span class="sub-btn btn-2"><a href="#"><i class="fa fa-meetup"></i></a></span>
-    <span class="sub-btn btn-3"><a href="#"><i class="fa fa-eercast"></i></a></span>
-    <span class="sub-btn btn-4"><a href="#"><i class="fa fa-grav"></i></a></span>
-    <span class="sub-btn btn-5"><a href="#"><i class="fa fa-volume-off" onclick="playAudio()" type="button"></i></a></span>
-    <div id="centerA"></div>
-  </div>
-  
-  <!-- for navigation -->
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+
+  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+  <a onclick="setup()" href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+
+
+</nav>
+
   <script>
-    $.fn.toggleText = function (t1, t2) {
-      if (this.text() == t1) this.text(t2);
-      else this.text(t1);
-      return this;
-    };
+    var song;
+    var button;
 
-    $(".menu").click(function () {
-      $(this).toggleClass("opened");
-      $('#centerA span a').toggleText('Close', 'Open');
-    });
+    function setup() {
+      song = loadSound("./images/bg-song.mp3", loaded);
+      button = createButton('play');
+      button.mousePressed(togglePlaying);
+    }
 
-    
+    function togglePlaying() {
+      if (!song.isPlaying()) {
+        song.play();
+        song.setVolume(0.3);
+        button.html('stop');
+      } else {
+        song.stop();
+        button.html('play');
+      }
+    }
+
+    function loaded() {
+      console.log('loaded');
+    }
   </script>
 
+
+<div class="mars"></div>
+<img src="https://assets.codepen.io/1538474/meteor.svg" class="meteor" />
+<p class="title">Mars is there, Waiting to be reached.</p>
+<p class="subtitle">
+  Get ready to explore mars <br />
+  Scroll down to find the path to your destination.
+</p>
+<div align="center">
+  <a class="btn-back" href="#">Bla bla bla</a>
+</div>
+<img src="https://assets.codepen.io/1538474/astronaut.svg" class="astronaut" />
+<img src="https://assets.codepen.io/1538474/spaceship.svg" class="spaceship" />
   <!-- SECTION for GRID -->
   <section id="explore" data-w-id="e2e45d9c-69fc-e7de-4e80-cd02d98ddb7a" style="opacity:0" class="planet-section">
     <div data-w-id="78ec5619-1445-20cd-dd74-140c363e485f" class="container with-light-line-and-glow w-container"><img

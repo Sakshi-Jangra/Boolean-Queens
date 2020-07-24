@@ -6,7 +6,7 @@
   <title>Journey</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./img/favicon2.png" />
+  <link rel="shortcut icon" href="./images/fev.png" />
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="./css/look.css">
@@ -55,9 +55,8 @@
 </head>
 
 <body onload="wait()">
-  <!-- SOUND -->
-  <iframe style="display: none;" width="0" height="0" src="https://www.youtube.com/watch?v=kONdnVd4hnA?rel=0&autoplay=1" frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- SOUND -->  
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/TCyzw2R9eFE?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
   <!-- loader  -->
   <div class="space" id="waiting">
@@ -129,33 +128,6 @@
     </filter>
   </defs>
 </svg>
-
-  <script>
-    var song;
-    var button;
-
-    function setup() {
-      song = loadSound("./images/bg-song.mp3", loaded);
-      button = createButton('play');
-      button.mousePressed(togglePlaying);
-    }
-
-    function togglePlaying() {
-      if (!song.isPlaying()) {
-        song.play();
-        song.setVolume(0.3);
-        button.html('stop');
-      } else {
-        song.stop();
-        button.html('play');
-      }
-    }
-
-    function loaded() {
-      console.log('loaded');
-    }
-  </script>
-
 
 <div class="mars"></div>
 <img src="https://assets.codepen.io/1538474/meteor.svg" class="meteor" />

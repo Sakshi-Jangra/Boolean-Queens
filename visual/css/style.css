@@ -108,12 +108,13 @@ button:hover {
 #stats {
   position: fixed;
   bottom: 40px;
-  left: 35px;
+  left: 27px;
   color: #0a0;
-  font-size: 85%;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  font-size: 115%;
+  padding: 13px;
+  background-image: url(../images/gen.png);
+  border-radius: 30px;
+  width: 20%;
 }
 
 a {
@@ -147,5 +148,6 @@ footer {
 }
 
 .spinner {
-  width: 2em;
+  width: 2.5em;
+  background-color: #00cc18cb;
 }

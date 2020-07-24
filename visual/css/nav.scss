@@ -5,7 +5,6 @@ $pi: 3.14;
 
 //config
 $menu-items: 5;
-$open-distance: 115px;
 $opening-angle: $pi - 0.2;
 
 body {
@@ -140,7 +139,7 @@ $hamburger-spacing: 8px;
 
     &:nth-child(#{$i + 2}) {
       transition-duration: 80ms+ (80ms * $i);
-      transform: translate3d(cos($angle), sin($angle), 0);
+      transform: translate3d(cos($angle) * 115px, sin($angle) * 115px, 0);
     }
   }
 }

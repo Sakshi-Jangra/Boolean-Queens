@@ -17,6 +17,9 @@ h6 {
   padding: 0px;
   font-weight: normal;
 }
+a:visited {
+  color: #00ff1f;
+}
 
 .header_title {
   font-size: 120%;
@@ -26,13 +29,15 @@ h6 {
 }
 
 .panel {
-  position: fixed;
+  position: absolute;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background-image: url(../images/screen1.png);
+  color: #27ff00;
   border-radius: 8px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  cursor: default;
+  box-shadow: 13px 11px 10px rgb(0 0 0 / 50%);
+  cursor: move;
+  font-family: monospace;
+  font-size: 15px;
 }
 
 .right_panel {
@@ -42,11 +47,11 @@ h6 {
 
 #algorithm_panel {
   right: 20px;
-  top: 70%;
+  top: 96%;
 }
 
 #instructions_panel {
-  top: 70%;
+  top: 96%;
   left: 20px;
   width: 550px;
 }

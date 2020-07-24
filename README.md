@@ -13,12 +13,6 @@ First repository to the project for THE MARS COLONIZATION PROGRAM presented by M
 - Aastha Kasotia
 - Neetu Singh
 
-### Recourses / Files
-
-Template website: https://codepen.io/waldo/project/editor/ZJdgKL
-
-Stores all the files, thoughts and ideas here!
-
 ### Tasks
 
 - [ ] Listing the features

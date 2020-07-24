@@ -6,7 +6,7 @@
   <title>Journey</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./img/favicon2.png" />
+  <link rel="shortcut icon" href="./images/fev.png" />
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="./css/look.css">
@@ -14,16 +14,22 @@
   <link rel="stylesheet" href="./lib/themes/jquery.ui.all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/bootstrap-style.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/loader.css"> 
-  <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
+  <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+
   
   <!-- Less Files -->
-  <link rel="stylesheet/less" type="text/css" href="./css/nav.less">
   <script src="//cdn.jsdelivr.net/npm/less"></script>
 
   <!-- JS links  -->
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+  
+  <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
 
   <!--JS links FROM MS REPO -->
   <script type="text/javascript" src="./lib/raphael-min.js"></script>
@@ -49,6 +55,9 @@
 </head>
 
 <body onload="wait()">
+  <!-- SOUND -->  
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/TCyzw2R9eFE?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
   <!-- loader  -->
   <div class="space" id="waiting">
     <div class="ship">
@@ -82,29 +91,56 @@
   </script>
 
   <!-- NAVIGATION -->
-  <div class="menu">
-    <span class="sub-btn btn-1"><a href="#"><i class="fa fa-snowflake-o"></i></a></span>
-    <span class="sub-btn btn-2"><a href="#"><i class="fa fa-meetup"></i></a></span>
-    <span class="sub-btn btn-3"><a href="#"><i class="fa fa-eercast"></i></a></span>
-    <span class="sub-btn btn-4"><a href="#"><i class="fa fa-grav"></i></a></span>
-    <span class="sub-btn btn-5"><a href="#"><i class="fa fa-bandcamp"></i></a></span>
-    <div id="centerA"></div>
-  </div>
-  
-       <!-- for navigation -->
-       <script>
-         $.fn.toggleText = function (t1, t2) {
-            if (this.text() == t1) this.text(t2);
-            else this.text(t1);
-            return this;
-          };
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
 
-          $(".menu").click(function () {
-            $(this).toggleClass("opened");
-            $('#centerA span a').toggleText('Close', 'Open');
-          });
-       </script>
+  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
 
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="shadowed-goo">
+
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+      <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+      <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+      <feBlend in2="shadow" in="goo" result="goo" />
+      <feBlend in2="goo" in="SourceGraphic" result="mix" />
+    </filter>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in2="goo" in="SourceGraphic" result="mix" />
+    </filter>
+  </defs>
+</svg>
+
+<div class="mars"></div>
+<img src="https://assets.codepen.io/1538474/meteor.svg" class="meteor" />
+<p class="title">Mars is there, Waiting to be reached.</p>
+<p class="subtitle">
+  Get ready to explore mars <br />
+  Scroll down to find the path to your destination.
+</p>
+<div align="center">
+  <a class="btn-back" href="#">Bla bla bla</a>
+</div>
+<img src="https://assets.codepen.io/1538474/astronaut.svg" class="astronaut" />
+<img src="https://assets.codepen.io/1538474/spaceship.svg" class="spaceship" />
   <!-- SECTION for GRID -->
   <section id="explore" data-w-id="e2e45d9c-69fc-e7de-4e80-cd02d98ddb7a" style="opacity:0" class="planet-section">
     <div data-w-id="78ec5619-1445-20cd-dd74-140c363e485f" class="container with-light-line-and-glow w-container"><img

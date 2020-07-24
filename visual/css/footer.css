@@ -1,203 +1,149 @@
-@import url(
-  https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700
-);
-
-* {
-  font-family: Open Sans;
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  65% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes floating {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  65% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
-footer {
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url("https://assets.codepen.io/1538474/star.svg"), -webkit-gradient(linear, left top, left bottom, from(#05007a), to(#4d007d));
+  background-image: url("https://assets.codepen.io/1538474/star.svg"), linear-gradient(to bottom, #05007a, #4d007d);
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+.mars {
   left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 27vmin;
+  background: url("https://assets.codepen.io/1538474/mars.svg") no-repeat bottom center;
+  background-size: cover;
+}
+
+.logo-404 {
+  position: absolute;
   margin-left: auto;
-  bottom: 0px;
-  border-radius: 0px;
-}
-section {
-  width: 100%;
-  display: inline-block;
-  background: #333;
-  height: 50vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.footer-distributed {
-  background: #666;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-  width: 33%;
-}
-
-/* The company logo */
-
-.footer-distributed h3 {
-  color: #ffffff;
-  font: normal 36px 'Open Sans', cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span {
-  color: lightseagreen;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links {
-  color: #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  font-weight: 400;
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer-distributed .footer-company-name {
-  color: #222;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center {
-  width: 30%;
-  margin-right: 5%;
-}
-
-.footer-distributed .footer-center i {
-  background-color: #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-  display: inline-block;
-  color: #ffffff;
-  font-weight: 400;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer-distributed .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
-
-.footer-distributed .footer-center p a {
-  color: lightseagreen;
-  text-decoration: none;
-}
-
-.footer-distributed .footer-links a:before {
-  content: '|';
-  font-weight: 300;
-  font-size: 20px;
+  margin-right: auto;
   left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
+  right: 0;
+  top: 16vmin;
+  width: 30vmin;
 }
 
-.footer-distributed .footer-links .link-1:before {
-  content: none;
+@media (max-width: 480px) and (min-width: 320px) {
+  .logo-404 {
+    top: 45vmin;
+  }
 }
 
-/* Footer Right */
-
-.footer-distributed .footer-right {
-  width: 30%;
+.meteor {
+  position: absolute;
+  right: 2vmin;
+  top: 16vmin;
 }
 
-.footer-distributed .footer-company-about {
-  line-height: 20px;
-  color: #92999f;
-  font-size: 15px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-  display: block;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons {
-  margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
+.title {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
   text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
+  font-size: 5vmin;
+  margin-top: 31vmin;
 }
 
-@media (max-width: 880px) {
-  .footer-distributed {
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i {
-    margin-left: 0;
+@media (max-width: 480px) and (min-width: 320px) {
+  .title {
+    margin-top: 65vmin;
   }
 }
+
+.subtitle {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 3.5vmin;
+  margin-top: -1vmin;
+  margin-bottom: 9vmin;
+}
+
+.btn-back {
+  border: 1px solid white;
+  color: white;
+  height: 5vmin;
+  padding: 12px;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-back:hover {
+  background: white;
+  color: #4d007d;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .btn-back {
+    font-size: 3.5vmin;
+  }
+}
+
+.astronaut {
+  position: absolute;
+  top: 18vmin;
+  left: 10vmin;
+  height: 30vmin;
+  -webkit-animation: floating 3s infinite ease-in-out;
+          animation: floating 3s infinite ease-in-out;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .astronaut {
+    top: 2vmin;
+  }
+}
+
+.spaceship {
+  position: absolute;
+  bottom: 15vmin;
+  right: 24vmin;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .spaceship {
+    width: 45vmin;
+    bottom: 18vmin;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
